@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator — Sleek, Responsive & Intuitive</title>
+    <meta
+      name="description"
+      content="A modern, dark-themed web calculator built for speed and simplicity, featuring a 12-digit display and smooth interactions."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="calc_icon.png" type="image/png" />
+
+    <link rel="stylesheet" href="index.css" />
+    <title>Calculator</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://calculator-nine-kappa-11.vercel.app"
+    />
+    <meta
+      property="og:title"
+      content="Simple Calculator — Sleek, Responsive & Intuitive"
+    />
+    <meta
+      property="og:description"
+      content="A modern, dark-themed web calculator built for speed and simplicity, featuring a 12-digit display and smooth interactions."
+    />
+    <meta
+      property="og:image"
+      content="https://calculator-nine-kappa-11.vercel.app/calc_og.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://calculator-nine-kappa-11.vercel.app"
+    />
+    <meta
+      property="twitter:title"
+      content="Simple Calculator — Sleek, Responsive & Intuitive"
+    />
+    <meta
+      property="twitter:description"
+      content="A modern, dark-themed web calculator built for speed and simplicity, featuring a 12-digit display and smooth interactions."
+    />
+    <meta
+      property="twitter:image"
+      content="https://calculator-nine-kappa-11.vercel.app/calc_og.png"
+    />
+
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#FF4500" />
+  </head>
+  <body>
+    <main class="cover">
+      <div class="shell">
+        <div class="panel">
+          <div class="display">
+            <label for="inputString">
+              DISPLAY - 12 DIGIT
+              <span id="error">text maximum is reach</span>
+            </label>
+            <input
+              id="inputString"
+              value="0"
+              readonly
+              inputmode="none"
+              aria-live="polite"
+            />
+          </div>
+
+          <div class="keypad" id="keypad">
+            <button type="button" class="key" data-value="7">7</button>
+            <button type="button" class="key" data-value="8">8</button>
+            <button type="button" class="key" data-value="9">9</button>
+            <button type="button" class="key key--op" data-value="/">/</button>
+
+            <button type="button" class="key" data-value="4">4</button>
+            <button type="button" class="key" data-value="5">5</button>
+            <button type="button" class="key" data-value="6">6</button>
+            <button type="button" class="key key--op" data-value="*">*</button>
+
+            <button type="button" class="key" data-value="1">1</button>
+            <button type="button" class="key" data-value="2">2</button>
+            <button type="button" class="key" data-value="3">3</button>
+            <button type="button" class="key key--op" data-value="-">-</button>
+
+            <button type="button" class="key" data-value="0">0</button>
+            <button type="button" class="key key--op" data-action="clear">
+              D
+            </button>
+            <button type="button" class="key key--equals" data-action="equals">
+              =
+            </button>
+            <button type="button" class="key key--op" data-value="+">+</button>
+          </div>
+
+          <p class="note">
+            <em>P.S: </em>OPERATIONS DON'T FOLLOW<strong> BODMAS</strong>
+          </p>
+          <p class="footer">
+            <span class="footer__bar"></span>
+            <button type="button" class="footer__reset" data-action="reset">
+              RESET
+            </button>
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
