@@ -41,7 +41,7 @@ async function request(endpoint, options = {}) {
 export const syncApi = {
   // POST /api/sync/enable  { username, syncKey, localHistory }
   async enableSync(username, syncKey, localHistory = []) {
-    const res = await request("/api/sync/enable", {
+    const res = await request("/api/enable-sync", {
       method: "POST",
       body: JSON.stringify({ username, syncKey, localHistory }),
     });
@@ -71,7 +71,7 @@ export const syncApi = {
 
   // DELETE /api/history/clear
   async clearHistory() {
-    return request("/api/history/clear", { method: "DELETE" });
+    return request("/api/history", { method: "DELETE" });
   },
 
   isSignedIn() {
