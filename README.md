@@ -1,43 +1,44 @@
-# Simple Calculator
+# SimplyCalc
 
-A sleek, responsive web-based calculator built with vanilla HTML, CSS, and JavaScript. This project features a modern dark-themed interface with a 12-digit display and basic arithmetic capabilities.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+A lightweight calculator with a vanilla JavaScript frontend and Express.js backend. Works fully offline by default, with optional cloud sync to persist calculation history across devices.
 
 ## Features
 
-- **Basic Arithmetic**: Supports addition, subtraction, multiplication, and division.
-- **12-Digit Display**: Limits input to 12 digits to maintain layout integrity, with a visual warning when the limit is reached.
-- **Responsive Design**: Fully optimized for various screen sizes, from mobile devices to desktops.
-- **Modern UI**: A clean, dark-themed aesthetic with intuitive button layouts and smooth transitions.
-- **Error Handling**: Gracefully handles mathematical anomalies like `Infinity` and `NaN`.
-- **Reset & Clear**: Includes a dedicated "D" (Delete/Backspace) button and a "RESET" function to clear the display.
+**Core Calculator**
+- Standard arithmetic operations with sequential expression evaluation
+- Responsive, keyboard-accessible interface
+- Local calculation history with delete and reset controls
+- Input validation and comprehensive error handling
 
-## Technical Implementation
+**Optional Cloud Sync**
+- Session-based authentication using username and sync key
+- Persist history to the cloud and access it from any device
+- Clear synced history and revoke active sessions on demand
 
-- **Vanilla JavaScript**: Logic is implemented without external libraries, using a custom parser to evaluate expressions sequentially.
-- **CSS Flexbox & Grid**: Utilizes modern CSS layout techniques for centering and responsiveness.
-- **Media Queries**: Custom breakpoints ensure the calculator remains usable on small screens.
+## Tech Stack
 
-## Note on Calculation Logic
-
-This calculator processes operations sequentially as they are entered and **does not follow BODMAS/PEMDAS** rules. For example, `2 + 3 * 4` will be calculated as `(2 + 3) * 4 = 20`.
-
-## How to Use
-
-1. Clone the repository.
-2. Open `index.html` in any modern web browser.
-3. Start calculating!
+| Area | Technologies |
+| --- | --- |
+| **Frontend** | HTML5, CSS3, Vanilla JavaScript |
+| **Backend** | Node.js, Express.js, SQLite, Drizzle ORM |
+| **Security** | bcrypt-ts, CORS, dotenv |
+| **Architecture** | Layered: `Routes → Controllers → Services → Database` |
 
 ## Project Structure
 
 ```text
 simpleCalculator/
-├── index.html      # Structure and layout
-├── index.css       # Styling and responsiveness
-├── index.js        # Calculation logic and interactivity
-└── calculator.png  # Project icon
-```
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
+├── frontend/
+│   ├── assets/
+│   ├── css/
+│   ├── js/
+│   ├── pages/
+│   └── index.html
+├── backend/
+│   ├── src/
+│   ├── drizzle.config.js
+│   ├── package.json
+│   └── sqlite.db
+└── README.md
