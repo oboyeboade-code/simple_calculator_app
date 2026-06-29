@@ -8,12 +8,8 @@
       name="description"
       content="A modern, dark-themed web calculator built for speed and simplicity, featuring a 12-digit display and smooth interactions."
     />
-
-    <!-- Favicon -->
-    <link rel="icon" href="calc_icon.png" type="image/png" />
-
-    <link rel="stylesheet" href="index.css" />
-    <title>Calculator</title>
+    <link rel="icon" href="assets/icon.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -61,17 +57,13 @@
       <div class="shell">
         <div class="panel">
           <div class="display">
-            <label for="inputString">
+            <p class="display__label">
               DISPLAY - 12 DIGIT
-              <span id="error">text maximum is reach</span>
-            </label>
-            <input
-              id="inputString"
-              value="0"
-              readonly
-              inputmode="none"
-              aria-live="polite"
-            />
+              <span class="display__error">Text maximum reached</span>
+            </p>
+            <output id="inputString" class="display__output" aria-live="polite">
+              0
+            </output>
           </div>
 
           <div class="keypad" id="keypad">
@@ -104,14 +96,21 @@
             <em>P.S: </em>OPERATIONS DON'T FOLLOW<strong> BODMAS</strong>
           </p>
           <p class="footer">
-            <span class="footer__bar"></span>
-            <button type="button" class="footer__reset" data-action="reset">
-              RESET
-            </button>
+            <span class="footer__group">
+              <span class="footer__bar"></span>
+              <button type="button" class="footer__btn" data-action="reset">
+                RESET
+              </button>
+            </span>
+
+            <span class="footer__group">
+              <a class="footer__btn" href="./pages/history.html">HISTORY</a>
+              <span class="footer__bar"></span>
+            </span>
           </p>
         </div>
       </div>
     </main>
-    <script src="index.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
