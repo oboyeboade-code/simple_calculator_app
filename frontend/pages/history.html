@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History — Simple Calculator</title>
+    <meta
+      name="description"
+      content="Your calculation history with optional cloud sync."
+    />
+    <link rel="icon" href="../assets/icon.png" type="image/png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <meta name="theme-color" content="#FF4500" />
+  </head>
+  <body>
+    <main class="cover">
+      <div class="shell">
+        <div class="panel">
+          <header class="page-header">
+            <h1>HISTORY</h1>
+            <a class="footer__btn" href="../index.html">← BACK</a>
+          </header>
+
+          <section class="sync-card">
+            <div class="sync-row">
+              <div class="sync-status">
+                Cloud Sync: <strong id="syncState">OFF</strong>
+                <span id="syncUser"></span>
+              </div>
+              <label class="toggle" title="Toggle cloud sync">
+                <input type="checkbox" id="syncToggle" />
+                <span class="toggle__slider"></span>
+              </label>
+            </div>
+
+            <div class="sync-form" id="syncForm">
+              <input
+                type="text"
+                id="username"
+                placeholder="username"
+                autocomplete="username"
+              />
+              <input
+                type="password"
+                id="syncKey"
+                placeholder="sync key"
+                autocomplete="current-password"
+              />
+            </div>
+
+            <p class="sync-msg" id="syncMsg"></p>
+          </section>
+
+          <ul class="history-list" id="historyList"></ul>
+          <p class="history-empty" id="historyEmpty" hidden>
+            No calculations yet. Crunch some numbers!
+          </p>
+
+          <div class="actions-row">
+            <button type="button" class="footer__btn" id="refreshBtn">
+              REFRESH
+            </button>
+            <button type="button" class="footer__btn" id="clearBtn">
+              CLEAR ALL
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="js/history.js"></script>
+  </body>
+</html>
