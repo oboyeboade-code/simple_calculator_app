@@ -8,7 +8,7 @@
     "node": "24.x"
   },
   "scripts": {
-    "start": "node src/server.js",
+    "start": "npm run db:push && node src/server.js",
     "db:push": "npx drizzle-kit push",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
