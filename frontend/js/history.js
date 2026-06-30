@@ -128,6 +128,10 @@ refreshBtn.addEventListener("click", async () => {
     setMsg(res.error || "Refresh failed.", "err");
     return;
   }
+<<<<<<< HEAD
+=======
+  console.log(res.data):
+>>>>>>> parent of 8cadc08... Update history.js
   historyStore.replaceAll(res.data || []);
   render();
   setMsg("Cloud history loaded.", "ok");
