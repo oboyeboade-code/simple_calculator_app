@@ -39,7 +39,7 @@ async function request(endpoint, options = {}) {
 
 // Endpoint mapping matches `explore` backend (src/sync.routes.js)
 export const syncApi = {
-  // POST /api/sync/enable  { username, syncKey, localHistory }
+  // POST /api/enable-sync  { username, syncKey, localHistory }
   async enableSync(username, syncKey, localHistory = []) {
     const res = await request("/api/enable-sync", {
       method: "POST",
@@ -49,16 +49,16 @@ export const syncApi = {
     return res;
   },
 
-  // POST /api/sync/logout
+  // POST /api/logout
   async logout() {
-    const res = await request("/api/sync/logout", { method: "POST" });
+    const res = await request("/api/logout", { method: "POST" });
     setSessionToken(null);
     return res;
   },
 
-  // POST /api/history  { expression, result }
+  // POST /api/calculation  { expression, result }
   async addCalculation(expression, result) {
-    return request("/api/history", {
+    return request("/api/calculation", {
       method: "POST",
       body: JSON.stringify({ expression, result }),
     });
@@ -69,7 +69,7 @@ export const syncApi = {
     return request("/api/history", { method: "GET" });
   },
 
-  // DELETE /api/history/clear
+  // DELETE /api/history
   async clearHistory() {
     return request("/api/history", { method: "DELETE" });
   },
