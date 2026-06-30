@@ -1,6 +1,6 @@
 // api.js — talks to the `simplycalc-api` backend
 
-const API_URL = "https://simplycalc-api-a5099f36f594.herokuapp.com";
+const API_URL = "https://simplecalculator.up.railway.app";
 const SESSION_KEY = "calc.sessionId";
 
 let activeSessionId =
