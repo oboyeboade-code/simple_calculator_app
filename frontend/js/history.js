@@ -154,7 +154,7 @@ if (syncApi.isSignedIn()) {
   (async () => {
     const res = await syncApi.getHistory();
     if (res.ok) {
-      historyStore.replaceAll(res.data || []);
+      historyStore.replaceAll(res.data?.history || []);
       render();
     } else if (res.status === 401) {
       // Session expired
