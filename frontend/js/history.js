@@ -128,7 +128,7 @@ refreshBtn.addEventListener("click", async () => {
     setMsg(res.error || "Refresh failed.", "err");
     return;
   }
-  console.log(res.data);
+  console.log(res.data):
   historyStore.replaceAll(res.data || []);
   render();
   setMsg("Cloud history loaded.", "ok");
