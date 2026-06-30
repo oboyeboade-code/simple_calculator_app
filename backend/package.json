@@ -8,7 +8,7 @@
     "node": "24.x"
   },
   "scripts": {
-    "start": "npm run db:push && node src/server.js",
+    "start": "node src/server.js",
     "db:push": "npx drizzle-kit push",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
@@ -21,9 +21,7 @@
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "drizzle-orm": "^0.45.2",
+    "drizzle-kit": "^0.31.10",
     "express": "^5.2.1"
-  },
-  "devDependencies": {
-    "drizzle-kit": "^0.31.10"
   }
 }
