@@ -1,4 +1,4 @@
-# SimplyCalc
+# SimpleCalculator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
@@ -7,23 +7,25 @@ A lightweight calculator with a vanilla JavaScript frontend and Express.js backe
 ## Features
 
 **Core Calculator**
+
 - Standard arithmetic operations with sequential expression evaluation
 - Responsive, keyboard-accessible interface
 - Local calculation history with delete and reset controls
 - Input validation and comprehensive error handling
 
 **Optional Cloud Sync**
+
 - Session-based authentication using username and sync key
 - Persist history to the cloud and access it from any device
 - Clear synced history and revoke active sessions on demand
 
 ## Tech Stack
 
-| Area | Technologies |
-| --- | --- |
-| **Frontend** | HTML5, CSS3, Vanilla JavaScript |
-| **Backend** | Node.js, Express.js, SQLite, Drizzle ORM |
-| **Security** | bcrypt-ts, CORS, dotenv |
+| Area             | Technologies                                          |
+| ---------------- | ----------------------------------------------------- |
+| **Frontend**     | HTML5, CSS3, Vanilla JavaScript                       |
+| **Backend**      | Node.js, Express.js, SQLite, Drizzle ORM              |
+| **Security**     | bcrypt-ts, CORS, dotenv                               |
 | **Architecture** | Layered: `Routes → Controllers → Services → Database` |
 
 ## Project Structure
@@ -42,3 +44,4 @@ simpleCalculator/
 │   ├── package.json
 │   └── sqlite.db
 └── README.md
+```

@@ -16,12 +16,12 @@ router.post(
 
 router.get(
   "/history",
-  asyncHandler(SyncController.getHistory)
+  asyncHandler(SyncController.getUserHistory)
 );
 
 router.delete(
   "/history",
-  asyncHandler(SyncController.clearHistory)
+  asyncHandler(SyncController.clearUserHistory)
 );
 
 router.post(
