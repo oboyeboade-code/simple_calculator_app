@@ -36,7 +36,7 @@ simpleCalculator/
 │   ├── assets/
 │   ├── css/
 │   ├── js/
-│   ├── pages/
+│   ├── history/
 │   └── index.html
 ├── backend/
 │   ├── src/
