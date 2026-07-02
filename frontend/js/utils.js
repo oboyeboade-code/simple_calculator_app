@@ -22,12 +22,3 @@ export const formatResult = (value, maxDigits = 12) => {
   if (text.length <= maxDigits) return text;
   return value.toPrecision(maxDigits - 2).replace(/\.?0+(e|$)/, "$1");
 };
-
-// export const generatePassword = (length = 8) => {
-//   const chars = "abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-//   let out = "";
-//   for (let i = 0; i < length; i++) {
-//     out += chars[Math.floor(Math.random() * chars.length)];
-//   }
-//   return out;
-// };
